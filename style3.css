@@ -1,0 +1,80 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #a9a9a9;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  position: relative;
+}
+h1 {
+  font-family: "Robto", sans-serif;
+  font-size: 45px;
+  text-align: center;
+  margin: 30px 0;
+}
+.btnRetour {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: #212227;
+  border-radius: 50%;
+  color: #f1f1f1;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 150px;
+  top: 10px;
+  box-shadow: 0 0 0 0 #212227;
+  animation: pulse 1.3s infinite;
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.01);
+  }
+}
+section {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carteGradient {
+  width: 500px;
+  height: 250px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  background: rgb(245, 105, 62);
+  box-shadow: 0 250px 100px -125px white inset;
+  transition: background 1s ease, box-shadow 1s ease;
+}
+.carteGradient:hover {
+  background: #b993d6;
+  box-shadow: 0 250px 100px -125px #8ca6db inset;
+}
+h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+}
+h2::before {
+  content: "❝";
+  font-size: 50px;
+}
+h2::after {
+  content: "❞";
+  font-size: 50px;
+}
+span {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}

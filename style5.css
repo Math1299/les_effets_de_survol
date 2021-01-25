@@ -1,0 +1,103 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: lightblue;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  position: relative;
+}
+h1 {
+  font-family: "Robto", sans-serif;
+  font-size: 45px;
+  text-align: center;
+  margin: 30px 0;
+  color: #0c1ada;
+}
+.btnRetour {
+  position: absolute;
+  color: lightblue;
+  text-decoration: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 20px;
+  right: 150px;
+  background: #0c1ada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 0 #0c1ada;
+  animation: pulse 1.4s infinite;
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.01);
+  }
+}
+section {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  padding: 20px;
+  margin-right: 90px;
+  width: 150px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #3f3f3f;
+}
+.btn1 {
+  border: 2px solid #f1f1f1;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.btn1::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  transform: rotate(-45deg);
+  left: -150px;
+}
+.btn1:hover::before {
+  transition: 0.7s transform linear;
+  transform: translateX(500px) rotate(-45deg);
+}
+.btn2 {
+  border: 2px solid #f1f1f1;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 0 0 #f1f1f1 inset;
+  transition: box-shadow.3s linear;
+}
+.btn2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #f1f1f1;
+  border-radius: 5px;
+}
+.btn2:hover {
+  box-shadow: 0 0 50px -20px #f1f1f1 inset;
+}
+.btn2:hover::before {
+  transition: all 0.3s linear;
+  width: 130%;
+  height: 150%;
+  border: 2px solid transparent;
+}

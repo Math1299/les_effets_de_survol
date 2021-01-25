@@ -1,0 +1,101 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #969696;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  position: relative;
+}
+h1 {
+  font-family: "Robto", sans-serif;
+  font-size: 45px;
+  text-align: center;
+  margin: 30px 0;
+  color: #f1f1f1;
+}
+.btnRetour {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  color: #f1f1f1;
+  text-decoration: none;
+  background: #a846a0;
+  top: 10px;
+  right: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  box-shadow: 0 0 0 0 #a846a0;
+  animation: pulse 1.3s infinite;
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.01);
+  }
+}
+.carte {
+  background: #626262;
+  width: 300px;
+  height: 450px;
+  margin: 200px auto;
+  cursor: pointer;
+  transition: background 0.3s linear;
+}
+.carte:hover {
+  background: #f5cb22;
+}
+.carte:hover .circle {
+  background: #333;
+}
+.carte:hover .circle svg {
+  transition: 0.4s all linear;
+  fill: gold;
+  transform: rotateY(360deg);
+}
+.carte:hover .carteTxt {
+  color: #333;
+}
+.cartePicture {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: gold;
+  transition: background 0.4s linear;
+}
+.circle svg {
+  width: 50%;
+  height: 50%;
+  fill: #333; /* permet de changer le fond d'un Svg*/
+}
+.carteTxt {
+  color: #f1f1f1;
+  transition: color 0.4s linear;
+}
+h2 {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid gold;
+}
+.carteTxt p {
+  padding: 15px;
+  margin: 0 0 40px 0;
+  text-align: justify;
+}
